@@ -1,0 +1,3 @@
+timesteps_survived,sum_episode_rewards,mean_reward,good_fruits_eaten,bad_fruits_eaten,lava_crossed,termination_reason,action_counter_0,action_counter_1,action_counter_2
+60,15,0.25,3,3,0,timestep_limit_exceeded,20,17,23
+32,12,0.375,2,0,0,,12,9,11

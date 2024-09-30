@@ -1,0 +1,37 @@
+# Paths to model checkpoints and data directories.
+# Hyperparameters for models and optimization.
+# Settings for data processing (e.g., sampling rates, buffer sizes).
+# Configuration options for the GUI.
+
+model_paths:
+  detr: 'pretrain/detr/outputs/checkpoint.pth'
+  eegnet: 'outputs/pretrained_classifier/pretrained_classifier_{subject}.pth'
+  mlp: 'outputs/mlp.pth'
+  distilhubert: 'outputs/DistilHuBERT'
+
+training_params:
+  learning_rate: 1e-4
+  optimizer: 'adam'
+  loss_functions:
+    classification: 'cross_entropy'
+    alignment: 'l1'
+
+bayesian_optimization:
+  pbounds:
+    x1: [0, 2.99]
+    x2: [0, 4.99]
+    x3: [0, 2.99]
+    x4: [0, 2.99]
+    x5: [0, 2.99]
+    x6: [0, 4.99]
+  utility_function:
+    kind: 'ucb'
+    kappa: 10
+  random_state: 1
+
+logging:
+  level: 'INFO'
+
+trial_settings:
+  max_trials: 200
+

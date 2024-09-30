@@ -1,0 +1,1 @@
+python main.py --dataset_file robotaxi --coco_path dataset --resume detr-r50_no-class-head.pth --output_dir outputs
